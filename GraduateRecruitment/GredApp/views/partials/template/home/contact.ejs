@@ -1,0 +1,85 @@
+ 	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="contact_area text-center">
+						<h3>GET IN TOUCH</h3>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<!--End of row-->
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="msg">
+						<div class="form_area">
+							<div class="contact-form wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+									<div id="alertMessage" class="alert_message"></div>
+									<br/>
+									<form class="form-horizontal contact-1" role="form" id="contactform">
+										<div class="form-group">
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="name" placeholder="Name *"> 
+												<label id="E1" class="text-danger hide_error">Required field</label>
+											</div>
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="email" placeholder="Email *"> 
+												<label id="E2" class="text-danger hide_error">Required field</label>
+												<label id="E3" class="text-danger hide_error">Invalid email id</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-12">
+												<select class="form-control" id="ddlDepartment">	
+													<option value="-select-">-select-</option>											   
+												</select>
+												<label id="E4" class="text-danger hide_error">Required field</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-sm-12">
+												<textarea id="message" class="form-control" cols="30" rows="8" placeholder="Message *" onchange="fnMessage()"></textarea>
+												<label id="E5" class="text-danger hide_error">Required field</label>
+												<br />
+												<input type="submit" id="btnContact" value="Submit" class="btn btn-default" data-loading-text="Loading...">
+											</div>
+										</div>
+									</form>
+								</div>
+						</div>
+					</div>
+				</div> 
+			</div> 
+		</div> 
+	</section>
+	
+	<div class="modal fade" id="myContactUsModal" role="dialog">
+    <div class="modal-dialog"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+          <p style="font-weight:bold;" id="actionMessage">Message submitted successfully.</p>
+          <p id="newUserId"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+ 	</div>
+ 
+	<script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script> 
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script> 
+	<script src="/js/contact.js" type="text/javascript"></script>
+	
+	<script>
+		setTimeout(function () {
+			if ($('#alertMessage').length) {
+				document.getElementById('alertMessage').style.opacity = 0;
+			}
+		}, 15000);
+	</script>
